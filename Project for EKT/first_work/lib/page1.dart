@@ -18,6 +18,20 @@ class _Page1State extends State<Page1> {
       appBar: AppBar(
         backgroundColor: Colors.red.shade900,
         title: Text('Explore'),
+
+        actions: const <Widget>[
+          Icon(
+            Icons.shopping_cart,
+            size: 32,
+          ),
+          Icon(
+            Icons.notifications_none,
+            size: 32,
+          ),
+
+        ],
+
+
       ),
     );
   }
