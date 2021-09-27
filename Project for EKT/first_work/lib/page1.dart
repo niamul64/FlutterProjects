@@ -105,12 +105,7 @@ class _Page1State extends State<Page1> {
         ),
 
       body: SafeArea(
-
-
         child:  Column(
-
-
-
           children:  <Widget>[
             SingleChildScrollView(
               keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
@@ -186,44 +181,174 @@ class _Page1State extends State<Page1> {
                 color: Colors.black45, // The color to use when painting the line.
               ),
             ),
-        Column(
-          children: [
-            Card(
-              color: Colors.white,
-              margin: EdgeInsets.fromLTRB(15,20,15,0),//left, top, right, bottom
-              child: ListTile(
-                leading:  Icon(
-                  Icons.phone,
-                  size: 35,
-                  color: Colors.teal,
 
-                ),
-                title: Text(
-                  
-                  '+8801704159..',
-                  style: TextStyle(
-                    color:Colors.black,
-                    fontSize: 17,
+///main body scroll
+        Expanded(
+          child: SingleChildScrollView(
+
+            keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+            scrollDirection: Axis.vertical,
+
+            child: Column(
+              children: <Widget>[
+                TextButton(
+                  onPressed: () {
+                    // Respond to button press
+                  },
+
+                  child: Text("All",
+                    style: TextStyle(
+                      color: Colors.black,
+                      backgroundColor: Colors.white38,
+
+                    ),
                   ),
                 ),
-              ),
+                TextButton(
+                  onPressed: () {
+                    // Respond to button press
+                  },
 
+                  child: Text("All",
+                    style: TextStyle(
+                      color: Colors.black,
+                      backgroundColor: Colors.white38,
+
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    // Respond to button press
+                  },
+
+                  child: Text("All",
+                    style: TextStyle(
+                      color: Colors.black,
+                      backgroundColor: Colors.white38,
+
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    // Respond to button press
+                  },
+
+                  child: Text("All",
+                    style: TextStyle(
+                      color: Colors.black,
+                      backgroundColor: Colors.white38,
+
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    // Respond to button press
+                  },
+
+                  child: Text("All",
+                    style: TextStyle(
+                      color: Colors.black,
+                      backgroundColor: Colors.white38,
+
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    // Respond to button press
+                  },
+
+                  child: Text("All",
+                    style: TextStyle(
+                      color: Colors.black,
+                      backgroundColor: Colors.white38,
+
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    // Respond to button press
+                  },
+
+                  child: Text("All",
+                    style: TextStyle(
+                      color: Colors.black,
+                      backgroundColor: Colors.white38,
+
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    // Respond to button press
+                  },
+
+                  child: Text("All",
+                    style: TextStyle(
+                      color: Colors.black,
+                      backgroundColor: Colors.white38,
+
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    // Respond to button press
+                  },
+                  child: Text("Programming",
+                    style: TextStyle(
+                        color: Colors.black45
+                    ),
+
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    // Respond to button press
+                  },
+                  child: Text("Maths",
+                    style: TextStyle(
+                        color: Colors.black45
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    // Respond to button press
+                  },
+                  child: Text("Software Testing",
+                    style: TextStyle(
+                        color: Colors.black45
+                    ),
+                  ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    // Respond to button press
+                  },
+                  child: Text("Economics",
+                    style: TextStyle(
+                        color: Colors.black45
+                    ),
+                  ),
+                ),
+              ],
             ),
 
-          ],
+          ),
+
         ),
+
+          ///main bodyb scroll
 
 
           ],
         ),
-        
-        
       ),
-
-
-
-
-
       ),
     );
   }
