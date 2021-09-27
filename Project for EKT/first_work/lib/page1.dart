@@ -110,8 +110,10 @@ class _Page1State extends State<Page1> {
         child:  Column(
 
 
+
           children:  <Widget>[
             SingleChildScrollView(
+              keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
               scrollDirection: Axis.horizontal,
 
               child: Row(
