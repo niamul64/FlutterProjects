@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
-
-
 class Page1 extends StatefulWidget {
   const Page1({Key? key}) : super(key: key);
 
@@ -17,7 +13,6 @@ class _Page1State extends State<Page1> {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
-
         appBar: AppBar(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
@@ -25,47 +20,47 @@ class _Page1State extends State<Page1> {
               bottomRight: Radius.circular(30),
             ),
           ),
-
           centerTitle: false,
           backgroundColor: Colors.red.shade900,
-
           title: Text(
-              'Explore',
+            'Explore',
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 30,
             ),
           ),
-
-          actions:  <Widget>[
-
+          actions: <Widget>[
             Container(
-              margin: EdgeInsets.only(top:7),
+              margin: EdgeInsets.only(top: 7),
               child: RawMaterialButton(
-                onPressed: () {  },
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                onPressed: () {},
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15)),
                 fillColor: Colors.red.shade700,
-                child: Icon(Icons.shopping_cart,size: 25,),
+                child: Icon(
+                  Icons.shopping_cart,
+                  size: 25,
+                ),
               ),
             ),
             SizedBox(
               width: 2,
             ),
             Container(
-              margin: EdgeInsets.only( top:7),
+              margin: EdgeInsets.only(top: 7),
               child: RawMaterialButton(
                 elevation: 6,
-                onPressed: () {  },
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                onPressed: () {},
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(15)),
                 fillColor: Colors.red.shade700,
-                child: Icon(Icons.notifications_none,
-                size: 25,),
+                child: Icon(
+                  Icons.notifications_none,
+                  size: 25,
+                ),
               ),
             ),
-
-
           ],
-
           bottom: AppBar(
             toolbarHeight: 75,
             backgroundColor: Colors.red.shade900,
@@ -75,13 +70,13 @@ class _Page1State extends State<Page1> {
                 bottomRight: Radius.circular(30),
               ),
             ),
-
-            title:  Card(
+            title: Card(
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15.0),
               ),
               color: Colors.white,
-              margin: EdgeInsets.fromLTRB(18,8, 18, 15),//left, top, right, bottom
+              margin:
+                  EdgeInsets.fromLTRB(18, 8, 18, 15), //left, top, right, bottom
               child: ListTile(
                 leading: TextButton(
                   onPressed: () {
@@ -95,55 +90,31 @@ class _Page1State extends State<Page1> {
                 ),
                 title: TextField(
                   decoration: InputDecoration(
-                      hintText: 'Search courses, bootcamps ',
-
-                 ),
+                    hintText: 'Search courses, bootcamps ',
+                  ),
                 ),
               ),
             ),
           ),
         ),
-
-      body: SafeArea(
-        child:  Column(
-          children:  <Widget>[
-            SingleChildScrollView(
-              keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-              scrollDirection: Axis.horizontal,
-
-              child: Row(
+        body: SafeArea(
+          child: Column(
+            children: <Widget>[
+              SingleChildScrollView(
+                keyboardDismissBehavior:
+                    ScrollViewKeyboardDismissBehavior.onDrag,
+                scrollDirection: Axis.horizontal,
+                child: Row(
                   children: <Widget>[
                     TextButton(
                       onPressed: () {
                         // Respond to button press
                       },
-
-                      child: Text("All",
-                      style: TextStyle(
-                        color: Colors.black,
+                      child: Text(
+                        "All",
+                        style: TextStyle(
+                          color: Colors.black,
                           backgroundColor: Colors.white38,
-
-                      ),
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: () {
-                        // Respond to button press
-                      },
-                      child: Text("Programming",
-                        style: TextStyle(
-                            color: Colors.black45
-                        ),
-
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: () {
-                        // Respond to button press
-                      },
-                      child: Text("Maths",
-                        style: TextStyle(
-                            color: Colors.black45
                         ),
                       ),
                     ),
@@ -151,212 +122,137 @@ class _Page1State extends State<Page1> {
                       onPressed: () {
                         // Respond to button press
                       },
-                      child: Text("Software Testing",
-                        style: TextStyle(
-                            color: Colors.black45
-                        ),
+                      child: Text(
+                        "Programming",
+                        style: TextStyle(color: Colors.black45),
                       ),
                     ),
                     TextButton(
                       onPressed: () {
                         // Respond to button press
                       },
-                      child: Text("Economics",
-                        style: TextStyle(
-                            color: Colors.black45
-                        ),
+                      child: Text(
+                        "Maths",
+                        style: TextStyle(color: Colors.black45),
                       ),
                     ),
-                    ],
+                    TextButton(
+                      onPressed: () {
+                        // Respond to button press
+                      },
+                      child: Text(
+                        "Software Testing",
+                        style: TextStyle(color: Colors.black45),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () {
+                        // Respond to button press
+                      },
+                      child: Text(
+                        "Economics",
+                        style: TextStyle(color: Colors.black45),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 0,
+                child: Divider(
+                  thickness: 1, // thickness of the line
+                  indent: 20, // empty space to the leading edge of divider.
+                  endIndent:
+                      0, // empty space to the trailing edge of the divider.
+                  color: Colors
+                      .black45, // The color to use when painting the line.
+                ),
+              ),
+              SizedBox(
+                height: 20,
               ),
 
-            ),
-            SizedBox(
-              height: 0,
+              ///main body scroll
+              Expanded(
+                child: SingleChildScrollView(
+                  keyboardDismissBehavior:
+                      ScrollViewKeyboardDismissBehavior.onDrag,
+                  scrollDirection: Axis.vertical,
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(20, 0, 20, 0), //left, top, right, bottom
+                    ///left, top, right, bottom
+                    child: Column(
+                      children: <Widget>[
 
-              child: Divider(
-                thickness: 1, // thickness of the line
-                indent: 20, // empty space to the leading edge of divider.
-                endIndent: 0, // empty space to the trailing edge of the divider.
-                color: Colors.black45, // The color to use when painting the line.
+
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget> [
+                            Text("Popular Courses"),
+                            TextButton(
+                              onPressed: () {
+                                // Respond to button press
+                              },
+                              child: Text(
+                                "See all",
+                                style: TextStyle(color: Colors.black45),
+                              ),
+                            ),
+
+                          ],
+                        ),
+
+
+
+                      ],
+                    ),
+                  ),
+                ),
               ),
-            ),
 
-///main body scroll
-        Expanded(
-          child: SingleChildScrollView(
-
-            keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
-            scrollDirection: Axis.vertical,
-
-            child: Column(
-              children: <Widget>[
-                TextButton(
-                  onPressed: () {
-                    // Respond to button press
-                  },
-
-                  child: Text("All",
-                    style: TextStyle(
-                      color: Colors.black,
-                      backgroundColor: Colors.white38,
-
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    // Respond to button press
-                  },
-
-                  child: Text("All",
-                    style: TextStyle(
-                      color: Colors.black,
-                      backgroundColor: Colors.white38,
-
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    // Respond to button press
-                  },
-
-                  child: Text("All",
-                    style: TextStyle(
-                      color: Colors.black,
-                      backgroundColor: Colors.white38,
-
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    // Respond to button press
-                  },
-
-                  child: Text("All",
-                    style: TextStyle(
-                      color: Colors.black,
-                      backgroundColor: Colors.white38,
-
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    // Respond to button press
-                  },
-
-                  child: Text("All",
-                    style: TextStyle(
-                      color: Colors.black,
-                      backgroundColor: Colors.white38,
-
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    // Respond to button press
-                  },
-
-                  child: Text("All",
-                    style: TextStyle(
-                      color: Colors.black,
-                      backgroundColor: Colors.white38,
-
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    // Respond to button press
-                  },
-
-                  child: Text("All",
-                    style: TextStyle(
-                      color: Colors.black,
-                      backgroundColor: Colors.white38,
-
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    // Respond to button press
-                  },
-
-                  child: Text("All",
-                    style: TextStyle(
-                      color: Colors.black,
-                      backgroundColor: Colors.white38,
-
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    // Respond to button press
-                  },
-                  child: Text("Programming",
-                    style: TextStyle(
-                        color: Colors.black45
-                    ),
-
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    // Respond to button press
-                  },
-                  child: Text("Maths",
-                    style: TextStyle(
-                        color: Colors.black45
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    // Respond to button press
-                  },
-                  child: Text("Software Testing",
-                    style: TextStyle(
-                        color: Colors.black45
-                    ),
-                  ),
-                ),
-                TextButton(
-                  onPressed: () {
-                    // Respond to button press
-                  },
-                  child: Text("Economics",
-                    style: TextStyle(
-                        color: Colors.black45
-                    ),
-                  ),
-                ),
-              ],
-            ),
-
+              ///main bodyb scroll
+            ],
           ),
-
         ),
-
-          ///main bodyb scroll
-
-
-          ],
-        ),
-      ),
       ),
     );
   }
 }
 
-
-
-
-
-
-
+//
+// Padding(
+// padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
+// child: Text(
+// 'Popular Courses',
+//
+// style: TextStyle(
+// fontSize: 20,
+// fontWeight: FontWeight.bold,
+// ),
+// ),
+// ),
+//
+//
+// Padding(
+//
+// padding: EdgeInsets.fromLTRB(20,10, 0, 0),
+// child: TextButton(
+//
+// onPressed: () {
+// // Respond to button press
+// },
+// child: Text("See all",
+// textAlign: TextAlign.end,
+//
+// style: TextStyle(
+// color: Colors.redAccent,
+// fontSize: 16,
+// fontWeight: FontWeight.bold,
+// ),
+// ),
+// ),
+// ),
+//
+//
+//
+//
