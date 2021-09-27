@@ -179,31 +179,193 @@ class _Page1State extends State<Page1> {
                       ScrollViewKeyboardDismissBehavior.onDrag,
                   scrollDirection: Axis.vertical,
                   child: Padding(
-                    padding: EdgeInsets.fromLTRB(20, 0, 20, 0), //left, top, right, bottom
+                    padding: EdgeInsets.fromLTRB(
+                        20, 0, 20, 0), //left, top, right, bottom
                     ///left, top, right, bottom
                     child: Column(
                       children: <Widget>[
-
-
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: <Widget> [
-                            Text("Popular Courses"),
+                          children: <Widget>[
+                            Text(
+                              "Popular Courses",
+                              style: TextStyle(
+                                color: Colors.black54,
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                             TextButton(
                               onPressed: () {
                                 // Respond to button press
                               },
                               child: Text(
                                 "See all",
-                                style: TextStyle(color: Colors.black45),
+                                style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 18,
+                                ),
                               ),
                             ),
-
                           ],
                         ),
 
+                        Row(
+                          children: <Widget>[
+                            Expanded(
+                              child: GestureDetector(
+                                onTap: () {
+                                  print('taped2');
+                                },
+                                child: Container(
+                                  height: 160,
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            Expanded(
+                              child: GestureDetector(
+                                onTap: () {
+                                  print('taped');
+                                },
+                                child: Container(
+                                  height: 160,
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
 
+                        ///2nd row in body
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Text(
+                              "High School Diploma",
+                              style: TextStyle(
+                                color: Colors.black54,
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            TextButton(
+                              onPressed: () {
+                                // Respond to button press
+                              },
+                              child: Text(
+                                "See all",
+                                style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 18,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
 
+                        Row(
+                          children: <Widget>[
+                            Expanded(
+                              child: GestureDetector(
+                                onTap: () {},
+                                child: Container(
+                                  height: 160,
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            Expanded(
+                              child: GestureDetector(
+                                onTap: () {},
+                                child: Container(
+                                  height: 160,
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+
+                        ///2nd row in body END
+                        ///3rd row in body
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Text(
+                              "Popular Courses",
+                              style: TextStyle(
+                                color: Colors.black54,
+                                fontSize: 25,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            TextButton(
+                              onPressed: () {
+                                // Respond to button press
+                              },
+                              child: Text(
+                                "See all",
+                                style: TextStyle(
+                                  color: Colors.red,
+                                  fontSize: 18,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+
+                        Row(
+                          children: <Widget>[
+                            Expanded(
+                              child: GestureDetector(
+                                onTap: () {},
+                                child: Container(
+                                  height: 160,
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 20,
+                            ),
+                            Expanded(
+                              child: GestureDetector(
+                                onTap: () {},
+                                child: Container(
+                                  height: 160,
+                                  decoration: BoxDecoration(
+                                    color: Colors.black,
+                                    borderRadius: BorderRadius.circular(10.0),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+
+                        ///3rd row in body END
                       ],
                     ),
                   ),
@@ -214,8 +376,123 @@ class _Page1State extends State<Page1> {
             ],
           ),
         ),
+
+        ///bottom appbar
+        bottomNavigationBar: BottomAppBar(
+          shape: CircularNotchedRectangle(),
+          child: Container(
+            margin: EdgeInsets.fromLTRB(0, 0, 0, 10),
+            height: 65,
+            child: Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+
+              children: <Widget>[
+                Expanded(
+                  child: Column(
+                    children: <Widget>[
+                      IconButton(
+
+                        icon: Icon(Icons.home,
+                          color: Colors.red,
+                        ),
+                        onPressed: () {},
+                        
+                      ),
+                      Text('Home',
+                          style: TextStyle(
+                              color: Colors.red,
+                          ),
+                      )
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Column(
+                    children: <Widget>[
+                      IconButton(
+
+                        icon: Icon(Icons.import_contacts,
+                          color: Colors.black54,
+                        ),
+                        onPressed: () {},
+
+                      ),
+                      Text('Courses',
+                        style: TextStyle(
+                          color: Colors.black54,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Column(
+                    children: <Widget>[
+                      IconButton(
+
+                        icon: Icon(Icons.collections_bookmark,
+                          color: Colors.black54,
+                        ),
+                        onPressed: () {},
+
+                      ),
+                      Text('Bootcamps',
+                        style: TextStyle(
+                          color: Colors.black54,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Column(
+                    children: <Widget>[
+                      IconButton(
+
+                        icon: Icon(Icons.storage,
+                          color: Colors.black54,
+                        ),
+                        onPressed: () {},
+
+                      ),
+                      Text('My Courses',
+                        style: TextStyle(
+                          color: Colors.black54,
+
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Column(
+                    children: <Widget>[
+                      IconButton(
+
+                        icon: Icon(Icons.perm_identity,
+                          color: Colors.black54,
+                        ),
+                        onPressed: () {},
+
+                      ),
+                      Text('Profile',
+                      style: TextStyle(
+                        color: Colors.black54,
+                      ),
+                      ),
+                    ],
+                  ),
+                ),
+
+
+              ],
+            ),
+          ),
+        ),
+
+        ///bottom appbar END
       ),
     );
   }
 }
-
