@@ -1,4 +1,0 @@
-#Sun Oct 17 00:21:35 BDT 2021
-base.0=D\:\\github uploads\\FlutterProjects\\Project for EKT\\dean_institute\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
-renamed.0=classes.dex
-path.0=classes.dex
